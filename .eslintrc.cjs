@@ -24,6 +24,7 @@ module.exports = {
     },
   },
   rules: {
+    'import/named': 0,
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
     // Add your own rules here to override ones from the extended configs.
