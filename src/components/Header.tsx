@@ -7,7 +7,7 @@ const Header = () => {
   const [openNav, setOpenNav] = useState<boolean>(false);
 
   return (
-    <>
+    <div className="mb-40">
       <header className="w-full absolute z-10">
         <div className="mx-auto flex justify-start items-center sm:px-16 px-6 py-4 bg-white">
           <button className="mx-2" onClick={() => setOpenNav(!openNav)}>
@@ -20,7 +20,7 @@ const Header = () => {
         </div>
       </header>
       <Sidebar openNav={openNav} />
-    </>
+    </div>
   );
 };
 

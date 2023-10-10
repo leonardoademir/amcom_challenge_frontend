@@ -11,13 +11,12 @@ interface SidebarProps {
 const Sidebar = ({ openNav }: SidebarProps) => {
   return (
     openNav && (
-      <aside className="bg-white-800 w-40 md:flex mt-12 leading-8 hidden transition-all duration-300 ease-in-out hover:w-2/12">
+      <aside className="bg-white-800 w-40 absolute mt-12 leading-8 transition-all duration-300 ease-in-out hover:w-2/12">
         <ul className="text-center space-y-1 w-full font-bold mt-16">
           {indexRoutes.map((r) => (
             <Link key={r.path} to={r.path}>
               <li className="bg-white-900 hover:bg-white text-custom-green cursor-pointer p-3">
-                {<PointOfSaleIcon className="mx-2" /> && r.name == 'Vendas'}
-                {<Calculate className="mx-2" /> && r.name == 'Comissões'}
+                {r.name == 'Vendas' ? <PointOfSaleIcon className="mx-2" /> : <Calculate className="mx-2" />}
                 {r.name}
               </li>
             </Link>
