@@ -13,6 +13,11 @@ export interface Product {
   comis_percentage: string; // It appears to be a string in the JSON
 }
 
+export interface SelectedProduct {
+  quantity: number;
+  product: Product;
+}
+
 export interface Client {
   id: number;
   id_person: Person;

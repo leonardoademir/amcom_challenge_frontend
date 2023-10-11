@@ -76,3 +76,71 @@ export const getComission = async (start_date: Date, end_date: Date): Promise<Ax
     throw error; // Re-throw the error to be handled by the caller
   }
 };
+
+export const getProducts = async (): Promise<AxiosResponse> => {
+  try {
+    const response: AxiosResponse = await api.get(`/product/`);
+    return response;
+  } catch (error: unknown) {
+    // Specify 'unknown' as the catch clause variable type
+    if (error instanceof AxiosError) {
+      // Handle AxiosError
+      console.error((error as AxiosError).message);
+    } else {
+      // Handle other error types
+      console.error('Unknown error:', error);
+    }
+    throw error; // Re-throw the error to be handled by the caller
+  }
+};
+
+export const getClients = async (): Promise<AxiosResponse> => {
+  try {
+    const response: AxiosResponse = await api.get(`/client/`);
+    return response;
+  } catch (error: unknown) {
+    // Specify 'unknown' as the catch clause variable type
+    if (error instanceof AxiosError) {
+      // Handle AxiosError
+      console.error((error as AxiosError).message);
+    } else {
+      // Handle other error types
+      console.error('Unknown error:', error);
+    }
+    throw error; // Re-throw the error to be handled by the caller
+  }
+};
+
+export const getSellers = async (): Promise<AxiosResponse> => {
+  try {
+    const response: AxiosResponse = await api.get(`/seller/`);
+    return response;
+  } catch (error: unknown) {
+    // Specify 'unknown' as the catch clause variable type
+    if (error instanceof AxiosError) {
+      // Handle AxiosError
+      console.error((error as AxiosError).message);
+    } else {
+      // Handle other error types
+      console.error('Unknown error:', error);
+    }
+    throw error; // Re-throw the error to be handled by the caller
+  }
+};
+
+export const postSell = async (payload): Promise<AxiosResponse> => {
+  try {
+    const response: AxiosResponse = await api.post(`/sell/`, payload);
+    return response;
+  } catch (error: unknown) {
+    // Specify 'unknown' as the catch clause variable type
+    if (error instanceof AxiosError) {
+      // Handle AxiosError
+      console.error((error as AxiosError).message);
+    } else {
+      // Handle other error types
+      console.error('Unknown error:', error);
+    }
+    throw error; // Re-throw the error to be handled by the caller
+  }
+};

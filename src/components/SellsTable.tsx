@@ -13,7 +13,7 @@ import DeleteModal from './DeleteModal';
 import useSells from '@/hooks/useSells';
 import { Sell } from '@/interface';
 
-const BasicTable = () => {
+const SellsTable = () => {
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
   const [idSelected, setIdSelected] = useState(0);
   const { sells, isLoading } = useSells();
@@ -67,4 +67,4 @@ const BasicTable = () => {
   );
 };
 
-export default BasicTable;
+export default SellsTable;
