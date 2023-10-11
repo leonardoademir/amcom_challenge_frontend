@@ -106,8 +106,6 @@ const SellCreation = () => {
               onChange={(e) => setDateTime(e.target.value)}
               value={dateTime}
               className="w-full h-12 p-3 rounded-sm border"
-              placeholder="0"
-              min={0}
             />
           </div>
           <div className="p-4 m-4 gap-3">

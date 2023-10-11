@@ -43,7 +43,7 @@ const useSells = () => {
         }, 1000);
       })
       .catch((error) => {
-        console.error('Error calling getSells:', error);
+        console.error('Error calling deleteSell:', error);
       })
       .finally(() => {
         setIsLoading(false);
@@ -57,7 +57,7 @@ const useSells = () => {
         setProducts(data.data);
       })
       .catch((error) => {
-        console.error('Error calling getSells:', error);
+        console.error('Error calling getProducts:', error);
       })
       .finally(() => {
         setIsLoading(false);
@@ -71,7 +71,7 @@ const useSells = () => {
         setClients(data.data);
       })
       .catch((error) => {
-        console.error('Error calling getSells:', error);
+        console.error('Error calling getClients:', error);
       })
       .finally(() => {
         setIsLoading(false);
@@ -85,7 +85,7 @@ const useSells = () => {
         setSellers(data.data);
       })
       .catch((error) => {
-        console.error('Error calling getSells:', error);
+        console.error('Error calling getSellers:', error);
       })
       .finally(() => {
         setIsLoading(false);

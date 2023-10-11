@@ -36,3 +36,9 @@ export interface Sell {
   invoice: string;
   sell_date: string;
 }
+
+export interface Comissions {
+  seller: Seller;
+  total_comission: number;
+  total_sells: number;
+}
