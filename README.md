@@ -1,27 +1,35 @@
-# React + TypeScript + Vite
+# amcom_challenge_frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### :memo: Sobre a aplicação
 
-Currently, two official plugins are available:
+Esta é uma aplicação FullStack para um desafio de admissão de vaga. Consiste num sistema de papelaria com cálculo de comissões e vendas, segue abaixo os critérios:</br>
+O nosso cliente é uma papelaria hipotética que gostaria de registrar suas vendas e calcular a comissão de seus vendedores com base nas vendas feitas em dado período e nos percentuais de comissão cadastrados nos produtos vendidos.</br>
+Um produto deve ter as seguintes informações: código, descrição, valor unitário e percentual de comissão, que pode variar entre 0 e 10%.</br>
+Uma venda tem número da nota fiscal, data/hora, cliente, vendedor e uma lista de um ou mais produtos e suas quantidades vendidas.</br>
+Clientes e vendedores têm nome, e-mail e telefone.</br>
+O cálculo da comissão é feito aplicando-se o percentual cadastrado no produto ao valor total da venda do produto (qtd * valor unitário).</br>
+Em alguns dias da semana, o percentual de comissão tem limites mínimos e máximos. Isso pode mudar com alguma frequência, por isso esses parâmetros devem ser configuráveis.</br>
+Exemplo: Segundas-Feiras Min: 3% Max: 5%. Nesse caso uma venda nesse dia, de um produto de comissão 10% pagaria uma comissão de 5%. Já a venda de um produto de comissão 2% pagaria 3%.</br>
+O total de comissão da venda é o total das somas das comissões dos itens da venda.</br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### :hammer: **Configurando o Projeto**
 
-## Expanding the ESLint configuration
+Clone o projeto</br>
+Com o projeto aberto, vamos executar os seguintes comandos de configuração</br>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### :computer: FRONTEND</br>
+na raiz do projeto vá para /frontend</br>
+*cd frontend</br>
+npm i</br>
+npm run dev</br>*
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 👨‍💻 Tecnologias Utilizadas</br>
+- React-Router-Dom
+- Vite
+- Material UI
+- Axios
+- ESLint
+- Prettier
+- TypeScript
+- ReactJS
+- TailwindCSS
