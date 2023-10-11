@@ -27,6 +27,8 @@ module.exports = {
     'import/named': 0,
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
+    'import/no-unresolved': [2, { caseSensitive: false }],
+    'react/prop-types': ['off'],
     // Add your own rules here to override ones from the extended configs.
   },
 };
