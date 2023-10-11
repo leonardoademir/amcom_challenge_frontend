@@ -144,3 +144,20 @@ export const postSell = async (payload): Promise<AxiosResponse> => {
     throw error; // Re-throw the error to be handled by the caller
   }
 };
+
+export const getComissions = async (startDate, endDate): Promise<AxiosResponse> => {
+  try {
+    const response: AxiosResponse = await api.get(`/seller/get_comission/?start_date${startDate}&end_date${endDate}`);
+    return response;
+  } catch (error: unknown) {
+    // Specify 'unknown' as the catch clause variable type
+    if (error instanceof AxiosError) {
+      // Handle AxiosError
+      console.error((error as AxiosError).message);
+    } else {
+      // Handle other error types
+      console.error('Unknown error:', error);
+    }
+    throw error; // Re-throw the error to be handled by the caller
+  }
+};
