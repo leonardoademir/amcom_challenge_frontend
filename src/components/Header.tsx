@@ -20,7 +20,7 @@ const Header = () => {
           <img src={Logo} alt="Logo" />
           <div className="mx-auto flex justify-center items-center sm:px-16 px-6 py-4 bg-white">
             <h1 className="text-custom-green font-bold text-4xl mr-3">
-              {path == '/comissions' ? 'COMISSÕES' : path == '/sell-creation' ? 'Nova Venda' : 'VENDAS'}
+              {path == '/comissions' ? 'COMISSÕES' : path == '/sell-create' ? 'Nova Venda' : 'VENDAS'}
             </h1>
           </div>
         </div>
